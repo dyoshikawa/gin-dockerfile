@@ -7,7 +7,7 @@ RUN mkdir /go/src/myproject
 WORKDIR /go/src/myproject
 COPY example.go .
 
-RUN go get github.com/gin-gonic/gin
+RUN go get -u github.com/golang/dep/cmd/dep
 RUN dep init
 RUN dep ensure
 
